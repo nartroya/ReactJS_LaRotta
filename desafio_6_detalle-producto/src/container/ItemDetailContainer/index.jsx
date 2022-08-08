@@ -1,27 +1,28 @@
 import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom';
 import ItemDetail from '../../components/ItemDetail';
 
 const ItemDetailContainer = () => {
 
-    const [pokemonDetail, setPokemonDetail] = useState(null);
-
+    const [servicesDetail, setServicesDetail] = useState(null);
+    const {itemId} = useParams();
     useEffect(() => { 
-        const getPokemonDetail = async () => {
+        const getServiceDetail = async () => {
             try {
-                const response = await fetch('https://pokeapi.co/api/v2/pokemon/100')
+                const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${itemId}`)
                 const data = await response.json();
                 console.log(data);
-                setPokemonDetail(data);
+                setServicesDetail(data);
             } catch (error) {
                 alert(`Hubo un error: ${error.message}`)
             }
         }
-        getPokemonDetail();
+        getServiceDetail();
 
-    }, [])
+    }, [itemId])
 
     return (
-        <ItemDetail pokemonDetail={pokemonDetail}/>
+        <ItemDetail servicesDetail={servicesDetail}/>
     )
 }
 
