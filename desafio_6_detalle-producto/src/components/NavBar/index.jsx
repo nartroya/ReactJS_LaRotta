@@ -1,14 +1,14 @@
 import React from 'react';
 import CartWidget from '../CartWidget';
-import './NavBar.css';
+import './styles.css';
 
 export default function NavBar() {
     return (
         <ul>
-            <li><a class="active" href="#home">Home</a></li>
-            <li><a href="#news">Ropa masculina</a></li>
-            <li><a href="#contact">Ropa femenina</a></li>
-            <li><a href="#about">Accesorios</a></li>
+            <li><a class="active" href="#home">Inicio</a></li>
+            <li><a href="#news">Infraestructura</a></li>
+            <li><a href="#contact">Plataforma</a></li>
+            <li><a href="#about">Soporte</a></li>
             <CartWidget/>
         </ul>
     )

@@ -1,5 +1,3 @@
-ines (11 sloc)  1.06 KB
-
 import React from 'react';
 import '../CartWidget/styles.css'
 
