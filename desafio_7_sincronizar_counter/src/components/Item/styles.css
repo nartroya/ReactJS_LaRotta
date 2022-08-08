@@ -1,0 +1,10 @@
+.cardI {
+    width: 250px;
+    padding: 20px;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

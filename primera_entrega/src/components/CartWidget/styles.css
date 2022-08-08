@@ -1,0 +1,7 @@
+/*Esto es un ejemplo de como debería quedar la hoja de estilo*/
+.imgCarrito {
+    width: 20px;
+    position: absolute;
+    right: 20;
+    top: 50;
+}
