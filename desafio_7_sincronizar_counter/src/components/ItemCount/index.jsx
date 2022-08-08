@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../ItemCount/styles.css';
 
-const ItemCount = ({stock}) => {
+const ItemCount = ({stock, handleAddCart}) => {
     const [cantidad, setCantidad]=useState(1);
     const addCantidad = () => {
         if (cantidad < stock){
@@ -13,9 +13,6 @@ const ItemCount = ({stock}) => {
             setCantidad (cantidad - 1);
         }
     };
-    const handleAddCard = () => {
-        alert(`Se agregaron ${cantidad} productos al carro`);
-    };
   return (
     <div className='contenedorPrincipal'>
         <div className='primerContenedor'>
@@ -23,7 +20,7 @@ const ItemCount = ({stock}) => {
             <div className='cantidad'><span>{cantidad}</span></div>
             <button className='resta' onClick={decreCantidad}>-</button>
         </div>
-        <button className='agregar' onClick={handleAddCard}>Agregar</button>
+        <button className='agregar' onClick={()=>handleAddCart(cantidad)}>Agregar</button>
     </div>
   )
 }

@@ -26,21 +26,16 @@ const ItemListContainer = ({greeting}) => {
   //console.log(servicios);
   */
   useEffect(() => {
-
-    //La petición debe estar en una función asíncrona
     const getServicios = async () => {
       try {
 
         if (pokemonsOriginales.length === 0){
           const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=10')
           const data = await response.json();
-          // console.log(data);
-          // setPokemons(data.results);
           const auxiliar = []
           for (const servicios of data.results) {
             const response = await fetch(servicios.url);
             const detailPokemon = await response.json();
-            // console.log(detailPokemon)
             auxiliar.push(detailPokemon);
           }
           setPokemonsOriginales(auxiliar)
