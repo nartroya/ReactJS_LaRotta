@@ -11,12 +11,13 @@ function App() {
       <NavBar/>
       <Routes>
         <Route path='/' element={<ItemListContainer/>}></Route>
-        <Route path='/category/:id' element={<ItemListContainer/>}/>
+        <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
+        <Route path='/item/:itemId' element={<ItemDetailContainer/>}/>
       </Routes>
-      <ItemListContainer greeting={"Ejemplo títutlo para un ítem"}/>
-      <ItemDetailContainer />
+      
     </BrowserRouter>
-
+/*<ItemListContainer greeting={"Ejemplo títutlo para un ítem"}/>
+      <ItemDetailContainer />*/
     /*<>
       
       <div className="App">
