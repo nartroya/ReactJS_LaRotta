@@ -1,0 +1,29 @@
+.contenedorPrincipal {
+    margin:30px;
+    display: flex;
+    flex-direction: column;
+    width: 20vh;
+}
+.primerContenedor {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+.suma, .resta {
+    width: 20%;
+    background-color: white;
+    border: none;
+}
+.cantidad {
+    width: 60%;
+    text-align: center;
+}
+.agregar {
+    border: 1px, blue;
+    background-color: white;
+    width: 100%;
+}
+.agregar:hover {
+    background-color: gray;
+}

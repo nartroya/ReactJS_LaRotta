@@ -1,0 +1,2 @@
+Este será una aplicación para mostrar una serie de servicios de tecnología de una empresa que hace consultorias en esta área.
+La idea es mostrar los servicios y agregar al carrito los que se vayan seleccionando, inicialmente debería ser con un API externo que obtenga datos de una BBDD por lo que se toma como ejemplo el mismo caso de los POKEMOS sin embargo, al final solo por entrega de proyecto se hará por fines prácticos por medio de una FETCH a un archivo .JS
